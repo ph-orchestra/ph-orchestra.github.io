@@ -12,7 +12,8 @@
 
 Singer 앱.
 
-<img src="11.png" width=200px />
+<img src="singer1.png" width=200px />
+<img src="singer2.png" width=200px />
 
 <http://ph-orchestra.github.io/soundcampaign-singer-original.zip>
 <http://ph-orchestra.github.io/soundcampaign-singer-old-working-just-ok.zip>
@@ -20,13 +21,14 @@ Singer 앱.
 
 Player 앱.
 
-<img src="11.png" width=200px />
+<img src="keys1.png" width=200px />
+<img src="keys2.png" width=200px />
 
 <http://ph-orchestra.github.io/soundcampaign-singer-keys.zip>
 
 Instruments 앱. (6가지)
 
-<img src="11.png" width=200px />
+<img src="inst1.png" width=200px />
 
 <http://ph-orchestra.github.io/soundcampaign-spk-soundshot-voice.zip>
 <http://ph-orchestra.github.io/soundcampaign-spk-soundshot-tuba.zip>
@@ -64,8 +66,8 @@ Instruments 앱. (6가지)
 ### 액션 - 따라하기, 말로만~
 
 a. 악기인 경우는 더이상 할 일은 없고, 버튼을 눌러서 어떤 소리가 들어있는지 확인하고 적절히 연주에 참여하면 됨.
-b. 싱어인 경우는 마이크에 대고 노래를 하여, 다른 악기들이 연주되는지 확인하고 노래로 악대를 지휘하면 됨.
-c. 건반인 경우는 화면에 나타난 건반을 연주하여, 다른 악기들이 연주되는지 확인하고 연주로 악대를 지휘.
+b. 싱어인 경우는 마이크에 대고 노래를 한다. 화면에서 음정인식을 확인할 수 있으며, 우측 상단에 작은 네모를 눌러 네트워크 방송을 켜고 끌 수있다. 켠 상태로 노래할 때, 다른 악기들이 연주되는지 확인하고 이 후, 노래로 악대를 지휘하면 됨.
+c. 건반인 경우는 화면에 나타난 건반을 연주한다. 우측 상단에 작은 네모를 눌러 네트워크 방송을 켜고 끌 수있다. 켠 상태로 노래할 때, 다른 악기들이 연주되는지 확인하고 연주로 악대를 지휘.
 
 ---
 
