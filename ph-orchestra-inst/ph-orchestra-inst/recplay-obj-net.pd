@@ -1,4 +1,4 @@
-#N canvas 1192 393 512 551 10;
+#N canvas 1192 398 512 551 10;
 #X obj 24 156 receive fromGUI;
 #X obj 24 178 list trim;
 #X obj 177 70 receive fromNetwork;
@@ -52,7 +52,6 @@ file etc., f 62;
 #X connect 14 0 15 0;
 #X connect 15 0 5 0;
 #X connect 16 0 5 0;
-#X connect 17 0 5 0;
 #X connect 18 0 4 0;
 #X connect 18 0 14 0;
 #X connect 19 0 24 1;

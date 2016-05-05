@@ -1,4 +1,4 @@
-#N canvas 380 342 512 551 10;
+#N canvas 380 352 512 551 10;
 #X obj 24 156 receive fromGUI;
 #X obj 24 178 list trim;
 #X obj 322 452 recorder;
