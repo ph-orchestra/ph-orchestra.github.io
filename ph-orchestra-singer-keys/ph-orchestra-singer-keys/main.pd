@@ -1,4 +1,4 @@
-#N canvas 335 101 924 430 10;
+#N canvas 335 106 924 430 10;
 #X obj 39 60 list trim;
 #X obj 39 38 r fromGUI;
 #X floatatom 39 104 5 0 0 1 s:monitor-vol - monitor-vol, f 5;
@@ -98,6 +98,12 @@
 10 -262144 -1 -1 0 1;
 #X obj 59 263 spigot;
 #X msg 39 220 list \$1;
+#X obj 370 267 receive fromGUI;
+#X obj 370 289 list trim;
+#X obj 370 311 route /clap;
+#X obj 370 333 route 1;
+#X msg 370 355 list /clap;
+#X obj 370 377 send toNetwork;
 #X connect 0 0 24 0;
 #X connect 1 0 0 0;
 #X connect 4 0 32 0;
@@ -130,3 +136,8 @@
 #X connect 31 0 3 0;
 #X connect 32 0 5 0;
 #X connect 32 0 31 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
