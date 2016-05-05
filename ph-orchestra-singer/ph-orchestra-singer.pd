@@ -1,0 +1,3 @@
+#N canvas 633 88 321 205 10;
+#X obj 70 91 ph-orchestra-singer/main;
+#X text 79 41 ph-orchestra / singer;

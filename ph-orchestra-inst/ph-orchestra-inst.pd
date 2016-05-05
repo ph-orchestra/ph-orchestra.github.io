@@ -1,0 +1,3 @@
+#N canvas 317 589 415 130 10;
+#X text 30 25 ph-orchestra-inst/edelweiss @ camino de ansan 2016;
+#X obj 117 72 ph-orchestra-inst/main;
