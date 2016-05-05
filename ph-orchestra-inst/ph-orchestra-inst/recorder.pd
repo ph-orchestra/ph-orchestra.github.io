@@ -1,71 +1,77 @@
-#N canvas 19 114 860 604 10;
-#X obj 515 236 dac~;
-#X obj 255 515 print [to.writesf~];
-#X text 763 573 .anchor.;
-#X obj 552 125 bng 15 250 50 0 empty \$0-preview-stop r:0-preview-stop
+#N canvas 19 124 1043 604 10;
+#X obj 698 231 dac~;
+#X obj 438 510 print [to.writesf~];
+#X text 946 568 .anchor.;
+#X obj 735 120 bng 15 250 50 0 empty \$0-preview-stop r:0-preview-stop
 17 7 0 10 -262144 -1 -1;
 #X text 8 8 .anchor.;
-#X obj 238 543 writesf~;
-#X msg 398 526 start;
-#X msg 457 526 stop;
-#X obj 457 500 bng 15 250 50 0 empty \$0-rec-stop r:0-rec-stop 17 7
+#X obj 421 538 writesf~;
+#X msg 581 521 start;
+#X msg 640 521 stop;
+#X obj 640 495 bng 15 250 50 0 empty \$0-rec-stop r:0-rec-stop 17 7
 0 10 -262144 -1 -1;
-#X obj 193 526 adc~;
+#X obj 376 522 adc~;
 #N canvas 0 50 450 278 (subpatch) 0;
-#X array \$0-rec-buffer 15488 float 2;
-#X coords 0 1 15488 -1 100 50 1 0 0;
-#X restore 192 308 graph;
-#X obj 192 267 soundfiler;
-#X msg 515 150 0;
-#X obj 515 104 bng 15 250 50 0 empty \$0-preview-start r:0-preview-start
+#X array \$0-rec-buffer 1 float 2;
+#X coords 0 1 1 -1 100 50 1 0 0;
+#X restore 375 303 graph;
+#X obj 375 262 soundfiler;
+#X msg 698 145 0;
+#X obj 698 99 bng 15 250 50 0 empty \$0-preview-start r:0-preview-start
 17 7 0 10 -262144 -1 -1;
-#X msg 552 151 stop;
-#X obj 366 113 bng 15 250 50 0 empty \$0-rec-stop r:0-rec-stop 17 7
+#X msg 735 146 stop;
+#X obj 549 108 bng 15 250 50 0 empty \$0-rec-stop r:0-rec-stop 17 7
 0 10 -262144 -1 -1;
-#X msg 238 488 open \$1;
-#X obj 398 443 t b b;
-#X msg 215 123 set symbol \$1;
-#X msg 238 432 set symbol \$1;
-#X obj 192 95 t b a a;
-#X obj 13 327 bng 15 250 50 0 \$0-preview-start empty s:0-preview-start
+#X msg 421 483 open \$1;
+#X obj 581 438 t b b;
+#X msg 398 118 set symbol \$1;
+#X msg 421 427 set symbol \$1;
+#X obj 375 90 t b a a;
+#X obj 169 211 bng 15 250 50 0 \$0-preview-start empty s:0-preview-start
 17 7 0 10 -262144 -1 -1;
-#X obj 57 127 bng 15 250 50 0 \$0-rec-stop empty s:0-rec-stop 17 7
+#X obj 91 107 bng 15 250 50 0 \$0-rec-stop empty s:0-rec-stop 17 7
 0 10 -262144 -1 -1;
-#X obj 13 101 bng 15 250 50 0 \$0-rec-start empty s:0-rec-start 17
+#X obj 13 211 bng 15 250 50 0 \$0-rec-start empty s:0-rec-start 17
 7 0 10 -262144 -1 -1;
-#X obj 57 395 bng 15 250 50 0 \$0-preview-stop empty s:0-preview-stop
+#X obj 247 107 bng 15 250 50 0 \$0-preview-stop empty s:0-preview-stop
 17 7 0 10 -262144 -1 -1;
-#X obj 366 133 del 100;
-#X floatatom 311 284 10 0 0 2 samplesize - -, f 10;
-#X obj 398 423 bng 15 250 50 0 empty \$0-rec-start r:0-rec-start 17
+#X obj 549 128 del 100;
+#X floatatom 494 279 10 0 0 2 samplesize - -, f 10;
+#X obj 581 418 bng 15 250 50 0 empty \$0-rec-start r:0-rec-start 17
 7 0 10 -262144 -1 -1;
-#X msg 192 150 symbol voice_60.wav;
-#X msg 238 460 symbol voice_60.wav;
+#X msg 375 145 symbol saying.wav;
+#X msg 421 455 symbol saying.wav;
 #X obj 13 51 inlet;
-#X obj 515 385 outlet;
-#X obj 311 306 route 0;
-#X msg 555 343 1;
-#X obj 555 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 698 380 outlet;
+#X obj 494 301 route 0;
+#X msg 738 338 1;
+#X obj 738 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 515 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 698 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 515 343 0;
-#X text 576 387 outlet [1] (float) : file exists?;
+#X msg 698 338 0;
+#X text 759 382 outlet [1] (float) : file exists?;
 #X text 66 51 inlet [1] (cmds);
-#X text 214 73 (otherwise) : file name;
-#X obj 515 178 tabplay~ \$0-rec-buffer;
-#X obj 342 200 f \$0;
-#X obj 342 178 loadbang;
-#X msg 192 239 read -resize \$1 \$2-rec-buffer;
-#X obj 192 217 pack s f;
-#X obj 311 328 f \$0;
-#X msg 311 350 \; \$1-rec-buffer resize 1 \; \$1-rec-buffer 0 0;
-#X obj 13 73 route start stop play load;
-#X obj 666 236 outlet;
-#X text 563 262 outlet [2] (bang) : play stop indicator;
-#X obj 533 50 inlet;
-#X text 583 51 inlet [2] (volume);
-#X obj 515 200 *~;
+#X text 397 68 (otherwise) : file name;
+#X obj 698 173 tabplay~ \$0-rec-buffer;
+#X obj 525 195 f \$0;
+#X obj 525 173 loadbang;
+#X msg 375 234 read -resize \$1 \$2-rec-buffer;
+#X obj 375 212 pack s f;
+#X obj 494 323 f \$0;
+#X msg 494 345 \; \$1-rec-buffer resize 1 \; \$1-rec-buffer 0 0;
+#X obj 849 231 outlet;
+#X text 746 257 outlet [2] (bang) : play stop indicator;
+#X obj 716 45 inlet;
+#X text 766 46 inlet [2] (volume);
+#X obj 698 195 *~;
+#X obj 13 73 route rec_start rec_stop play_start play_stop;
+#X obj 45 182 bng 15 250 50 0 \$0-preview-stop empty s:0-preview-stop
+17 7 0 10 -262144 -1 -1;
+#X obj 13 154 t b b;
+#X obj 169 154 t b b;
+#X obj 201 182 bng 15 250 50 0 \$0-rec-stop empty s:0-rec-stop 17 7
+0 10 -262144 -1 -1;
 #X connect 3 0 14 0;
 #X connect 6 0 5 0;
 #X connect 7 0 5 0;
@@ -90,7 +96,7 @@
 #X connect 27 0 17 0;
 #X connect 28 0 44 0;
 #X connect 29 0 16 0;
-#X connect 30 0 47 0;
+#X connect 30 0 52 0;
 #X connect 32 0 35 0;
 #X connect 32 0 45 0;
 #X connect 32 1 34 0;
@@ -98,19 +104,22 @@
 #X connect 34 0 33 0;
 #X connect 35 0 36 0;
 #X connect 36 0 31 0;
-#X connect 40 0 52 0;
-#X connect 40 1 48 0;
+#X connect 40 0 51 0;
+#X connect 40 1 47 0;
 #X connect 41 0 44 1;
 #X connect 42 0 41 0;
 #X connect 43 0 11 0;
 #X connect 44 0 43 0;
 #X connect 45 0 46 0;
-#X connect 47 0 23 0;
-#X connect 47 1 22 0;
-#X connect 47 1 24 0;
-#X connect 47 2 21 0;
-#X connect 47 3 28 0;
-#X connect 47 4 20 0;
-#X connect 50 0 52 1;
-#X connect 52 0 0 0;
-#X connect 52 0 0 1;
+#X connect 49 0 51 1;
+#X connect 51 0 0 0;
+#X connect 51 0 0 1;
+#X connect 52 0 54 0;
+#X connect 52 1 22 0;
+#X connect 52 2 55 0;
+#X connect 52 3 24 0;
+#X connect 52 4 20 0;
+#X connect 54 0 23 0;
+#X connect 54 1 53 0;
+#X connect 55 0 21 0;
+#X connect 55 1 56 0;
