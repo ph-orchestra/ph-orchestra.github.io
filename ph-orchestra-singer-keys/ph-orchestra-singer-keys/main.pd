@@ -1,4 +1,4 @@
-#N canvas 335 106 924 430 10;
+#N canvas 335 111 924 430 10;
 #X obj 39 60 list trim;
 #X obj 39 38 r fromGUI;
 #X floatatom 39 104 5 0 0 1 s:monitor-vol - monitor-vol, f 5;
@@ -29,7 +29,7 @@
 #X obj 328 77 s toGUI;
 #X obj 328 33 loadbang;
 #X msg 328 55 list /tgl.netmsg set 0;
-#N canvas 63 401 1056 291 buttonkeyboard 0;
+#N canvas 63 406 1056 291 buttonkeyboard 0;
 #X obj 317 235 outlet;
 #X text 375 234 1-note detected in symbol;
 #X msg 20 105 symbol /C4;
@@ -59,12 +59,13 @@
 #X obj 713 105 route 1;
 #X obj 812 127 route 1;
 #X obj 919 127 route 1;
+#X obj 149 32 send toNetwork;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X connect 6 0 7 0;
-#X connect 7 0 8 0;
+#X connect 7 0 27 0;
 #X connect 8 0 17 0;
 #X connect 8 1 18 0;
 #X connect 8 2 19 0;
