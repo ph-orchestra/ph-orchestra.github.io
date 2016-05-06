@@ -1,4 +1,4 @@
-#N canvas 605 299 1105 450 10;
+#N canvas 605 304 1105 450 10;
 #X obj 771 190 print [to.writesf~];
 #X text 1025 413 .anchor.;
 #X obj 434 293 bng 15 250 50 0 empty \$0-preview-stop r:0-preview-stop
@@ -51,7 +51,7 @@
 #X obj 169 154 t b b;
 #X obj 201 182 bng 15 250 50 0 \$0-rec-stop empty s:0-rec-stop 17 7
 0 10 -262144 -1 -1;
-#N canvas 739 302 789 619 play_module 0;
+#N canvas 779 394 789 619 play_module 1;
 #X obj 130 209 + 1;
 #X floatatom 130 237 5 0 0 1 playbackspeed - -, f 5;
 #X obj 84 156 moses 0;
@@ -94,10 +94,9 @@
 1;
 #X obj 355 135 t b a;
 #X obj 142 578 dac~;
-#N canvas 3 366 292 218 delayed 0;
+#N canvas 3 398 292 218 delayed 1;
 #X obj 15 35 inlet~;
 #X obj 15 133 outlet~;
-#X obj 15 63 delwrite~ \$0-del \$1;
 #X obj 66 84 *~ 0.7;
 #X text 7 4 .anchor.;
 #X text 199 171 .anchor.;
@@ -108,14 +107,15 @@
 1;
 #X obj 15 105 vd~ \$0-del;
 #X obj 138 88 inlet~;
-#X connect 0 0 2 0;
-#X connect 3 0 2 0;
-#X connect 6 0 8 0;
-#X connect 8 0 7 0;
-#X connect 8 0 9 0;
-#X connect 10 0 3 0;
-#X connect 10 0 1 0;
-#X connect 11 0 10 0;
+#X obj 15 63 delwrite~ \$0-del 1000;
+#X connect 0 0 11 0;
+#X connect 2 0 11 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 2 0;
+#X connect 9 0 1 0;
+#X connect 10 0 9 0;
 #X restore 108 526 pd delayed;
 #X obj 222 378 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
