@@ -1,5 +1,5 @@
-#N canvas 894 179 924 430 10;
-#N canvas 250 206 491 334 pitchdetect 0;
+#N canvas 237 243 924 430 10;
+#N canvas 250 196 491 334 pitchdetect 0;
 #X obj 200 263 outlet;
 #X text 258 262 1-note detected in symbol;
 #X msg 200 52 symbol /C4;
