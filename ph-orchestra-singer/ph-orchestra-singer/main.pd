@@ -1,5 +1,5 @@
-#N canvas 237 248 924 430 10;
-#N canvas 250 196 491 334 pitchdetect 0;
+#N canvas 894 179 924 430 10;
+#N canvas 250 206 491 334 pitchdetect 0;
 #X obj 200 263 outlet;
 #X text 258 262 1-note detected in symbol;
 #X msg 200 52 symbol /C4;
@@ -131,7 +131,7 @@
 #X obj 328 77 s toGUI;
 #X obj 328 33 loadbang;
 #X msg 328 55 list /tgl.netmsg set 0;
-#X msg 39 220 list \$1;
+#X msg 39 220 list \$1 1;
 #X connect 0 0 5 0;
 #X connect 1 0 35 0;
 #X connect 2 0 1 0;
