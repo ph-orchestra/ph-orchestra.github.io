@@ -1,4 +1,4 @@
-#N canvas 748 126 681 765 10;
+#N canvas 748 131 681 765 10;
 #X obj 27 221 tgl 15 0 is-recording empty s:is-recording 17 7 0 10
 -262144 -1 -1 0 1;
 #X obj 27 155 receive fromGUI;
